@@ -211,9 +211,9 @@ for epoch in tqdm(range(num_epochs)):
     vis.line(X=[epoch],Y=[np.mean(val_accuracy[-2468 // batch_size :]) * 100],win='accuracy',update='append')
 # In[ ]:
     f = open("log.txt", "a")
-    f.write("Epoch {} of {} took {:.3f}s /n".format(                                                 epoch + 1, num_epochs, time.time() - start_time))
-    f.write("  training loss (in-iteration): \t{:.6f}/n".format(                                    np.mean(train_loss[-9840 // batch_size :])))
-    f.write("  validation accuracy: \t\t\t{:.2f} % /n".format(                                       np.mean(val_accuracy[-2468 // batch_size :]) * 100))
+    f.write("Epoch {} of {} took {:.3f}s \n".format(                                                 epoch + 1, num_epochs, time.time() - start_time))
+    f.write("  training loss (in-iteration): \t{:.6f}\n".format(                                    np.mean(train_loss[-9840 // batch_size :])))
+    f.write("  validation accuracy: \t\t\t{:.2f} % \n".format(                                       np.mean(val_accuracy[-2468 // batch_size :]) * 100))
     f.close()
 
 
